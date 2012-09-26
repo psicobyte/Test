@@ -15,8 +15,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-IFS='
-'
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
 
 #if [[ $3 == 't' ]]
 #then
@@ -45,5 +45,5 @@ else
         done
 fi
 
-
+IFS=$SAVEIFS
 
