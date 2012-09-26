@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Copyright 2012 Allan Psicobyte
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+IFS='
+'
+
+#if [[ $3 == 't' ]]
+#then
+#        mod= "-t -r"
+#else
+#        mod= " "
+#fi
+
+if [[ $1 == "" || $2 == "" ]]
+then
+        echo "Renombra por lotes"
+        echo "uso: $0 NOMBRE EXTENSION"
+        echo "NOMBRE: EL Nombre que se quiere usar (NOMBRE1.jpg NOMBRE2.jpg...)"
+        echo "EXTENSION: La extensión a la que se quiere renombrar"
+else
+        i=1
+        
+
+        for fichero in $( ls ${mod} *.${2})
+
+        do
+ 		numero=$(printf "%03d" $i)
+
+                mv ${fichero} ${1}${numero}.${2}
+                let i++
+        done
+fi
+
+
+
