@@ -1,6 +1,10 @@
 #!/bin/bash
 
+#<<<<<<< HEAD
 # Modified again
+=======
+# Modified Variass veces
+#>>>>>>> 4461977dc65dc01dc4e68064f749c12391441ebb
 
 # Copyright 2012 Allan Psicobyte
 #    This program is free software: you can redistribute it and/or modify
